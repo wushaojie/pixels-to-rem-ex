@@ -1,0 +1,9 @@
+{
+  "name": "pixels-to-rem-ex",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "wushaojie",
+  "license": "MIT",
+  "description": "pixels to rem.",
+  "repository": "https://github.com/wushaojie/pixels-to-rem-ex.git"
+}
