@@ -41,10 +41,10 @@ module.exports = postcss.plugin('postcss-pixels-to-rem-ex', function pixelstorem
           rule.parent.params = replaceItem(rule.parent.params, convertedVal, matches);
         }
       }
+      var excludedTest = exclude.some(function(el, i){
+        return el.test(rule.selector);
+      });
       rule.walkDecls(function (decl, i) {
-        var excludedTest = exclude.some(function(el, i){
-          return el.test(rule.selector);
-        });
         var matches = findMatches(decl.value);
         if (matches && !excludedTest) {
           var convertedValues = convertValues(matches);
